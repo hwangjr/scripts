@@ -186,12 +186,12 @@ function download_files(){
 
     # Download start script
     if [ "$OS" == 'CentOS' ];then
-        if ! wget --no-check-certificate -O shadowsocks-go https://github.com/hwangjr/scripts/shadowsocks/raw/master/shadowsocks-go; then
+        if ! wget --no-check-certificate -O shadowsocks-go https://github.com/hwangjr/scripts/raw/master/shadowsocks/shadowsocks-go; then
             echo "Failed to download shadowsocks-go auto start script!"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate -O shadowsocks-go https://github.com/hwangjr/scripts/shadowsocks/raw/master/shadowsocks-go-debian; then
+        if ! wget --no-check-certificate -O shadowsocks-go https://github.com/hwangjr/scripts/raw/master/shadowsocks/shadowsocks-go-debian; then
             echo "Failed to download shadowsocks-go auto start script!"
             exit 1
         fi

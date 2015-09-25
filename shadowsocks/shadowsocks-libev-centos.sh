@@ -150,7 +150,7 @@ function download_files(){
         exit 1
     fi
     # Download start script
-    if ! wget --no-check-certificate https://github.com/hwangjr/scripts/shadowsocks/raw/master/shadowsocks-libev; then
+    if ! wget --no-check-certificate https://github.com/hwangjr/scripts/raw/master/shadowsocks/shadowsocks-libev; then
         echo "Failed to download shadowsocks-libev start script!"
         exit 1
     fi
