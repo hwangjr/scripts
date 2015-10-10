@@ -1,0 +1,19 @@
+#!/bin/sh
+#################################################################################
+# Filename: svn_clear
+# Description: Clear a svn working copy, make it a nomal directory.
+# Usage: svn_clear [PATH]
+# "svn_clear" will remove all the ".svn" directory recursively
+# from the PATH you gived. The current directory by default.
+#################################################################################
+
+WORK_PATH=$1
+if [ -z "$WORK_PATH" ]; then
+WORK_PATH="."
+fi
+
+for files in `tree -difa $WORK_PATH | grep '.svn$'`
+do
+echo "Cleaning" $files " ... "
+rm -rf $files
+done
