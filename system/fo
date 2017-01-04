@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dir="."
+if [ $# -gt 0 ]; then
+    dir=$@
+fi
+
+dolphin $dir
